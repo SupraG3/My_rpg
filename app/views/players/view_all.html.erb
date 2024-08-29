@@ -1,0 +1,58 @@
+<div class="users-page">
+  <div class="users-container">
+    <h1>All Users and Players</h1>
+
+    <% if flash[:notice] %>
+      <div class="alert alert-success"><%= flash[:notice] %></div>
+    <% elsif flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+
+    <table>
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+          <th>Players</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr id="user-<%= user.id %>">
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td><%= user.role %></td>
+            <td><%= user.created_at %></td>
+            <td><%= user.updated_at %></td>
+            <td>
+              <ul>
+                <% user.players.each do |player| %>
+                  <li>
+                    <strong>Name:</strong> <%= player.name %> - 
+                    <strong>Level:</strong> <%= player.level %> - 
+                    <strong>Experience:</strong> <%= player.experience %> - 
+                    <strong>Health:</strong> <%= player.health %> - 
+                    <strong>Strength:</strong> <%= player.strength %> |
+                    <%= link_to 'Edit', edit_player_path(player), class: 'btn btn-primary' %>
+                    <%= link_to 'Delete', player_path(player), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+                  </li>
+                <% end %>
+              </ul>
+            </td>
+            <td>
+              <%= link_to 'Delete', user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <% if current_user.admin? %>
+      <button onclick="window.history.back();" class="btn btn-secondary">Return</button>
+    <% end %>
+  </div>
+</div>

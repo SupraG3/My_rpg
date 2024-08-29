@@ -1,0 +1,49 @@
+<div class="players-page">
+  <div class="players-container">
+    <h1>Your Players</h1>
+
+    <% if @players.any? %>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Experience</th>
+            <th>Health</th>
+            <th>Strength</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @players.each do |player| %>
+            <tr>
+              <td><%= player.name %></td>
+              <td><%= player.level %></td>
+              <td><%= player.experience %></td>
+              <td><%= player.health %></td>
+              <td><%= player.strength %></td>
+              <td class="actions">
+                <%= link_to 'Show', player, class: 'show' %>
+                <%= link_to 'Edit', edit_player_path(player), class: 'edit' %>
+                <%= link_to 'Destroy', player, method: :delete, data: { confirm: 'Are you sure?' }, class: 'destroy' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <p class="no-players">You do not have any players yet.</p>
+    <% end %>
+
+    <div class="button-container">
+      <%= link_to 'Create a new player', new_player_path, class: 'btn new-player' %>
+      <% if current_user.admin? %>
+        <%= link_to 'View All Players', view_all_players_path, class: 'btn view-all-players' %>
+        <%= link_to 'View All Items', view_all_items_path, class: 'btn view-all-items' %>
+        <%= link_to 'Add Item', new_item_path, class: 'btn btn-success' %>
+        <%= link_to 'Create Quest', new_quest_path, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>

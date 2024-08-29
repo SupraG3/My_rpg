@@ -1,0 +1,38 @@
+<div class="battle-page">
+  <div class="battle-container">
+    <h1>Battle</h1>
+
+    <div class="health-status">
+      <div class="player-status">
+        <p>
+          <strong>Player Health:</strong>
+          <%= @battle.player_health %>
+        </p>
+      </div>
+      <div class="opponent-status">
+        <p>
+          <strong>Opponent Health:</strong>
+          <%= @battle.opponent_health %>
+        </p>
+      </div>
+    </div>
+
+    <div class="battle-status">
+      <% if @battle.status == 'won' %>
+        <p>Congratulations! You have won the battle!</p>
+        <%= link_to 'Back to Players', player_path(@battle.player), class: 'btn btn-primary' %>
+      <% elsif @battle.status == 'lost' %>
+        <p>You have lost the battle. Better luck next time.</p>
+        <%= link_to 'Back to Quests', quests_path(player_id: @battle.player.id), class: 'btn btn-primary' %>
+      <% else %>
+        <% if @battle.current_turn.odd? %>
+          <p>Your turn to attack!</p>
+          <%= link_to 'Attack', attack_battle_path(@battle, player_id: @battle.player.id), method: :patch, class: 'btn btn-primary' %>
+        <% else %>
+          <p>Opponent's turn to attack. Please wait...</p>
+          <%= link_to 'Continue', attack_battle_path(@battle, player_id: @battle.player.id), method: :patch, class: 'btn btn-primary' %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

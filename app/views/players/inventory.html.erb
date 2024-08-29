@@ -1,0 +1,21 @@
+<h1>Inventory for <%= @player.name %></h1>
+
+<h2>Equipped Items</h2>
+<ul>
+  <% @player.inventories.where(equipped: true).each do |inventory| %>
+    <li>
+      <%= inventory.item.name %> - <%= button_to 'Unequip', unequip_item_player_path(@player, inventory.item), method: :patch %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Available Items</h2>
+<ul>
+  <% @player.inventories.where(equipped: false).each do |inventory| %>
+    <li>
+      <%= inventory.item.name %> - <%= button_to 'Equip', equip_item_player_path(@player, inventory.item), method: :patch %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back to Player', player_path(@player) %>

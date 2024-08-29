@@ -1,0 +1,102 @@
+.edit-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'MedievalSharp', cursive;
+  color: #fff;
+}
+
+.edit-container {
+  width: 40%;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 40px 60px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.edit-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.edit-container .field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-container .field label {
+  margin-bottom: 5px;
+}
+
+.edit-container .field input[type="email"],
+.edit-container .field input[type="password"] {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-container .actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-container .actions input[type="submit"] {
+  width: 60%;
+  padding: 10px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-container .actions input[type="submit"]:hover {
+  background: #45a049;
+}
+
+.edit-container .cancel-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.edit-container .cancel-account p {
+  margin-bottom: 10px;
+}
+
+.edit-container .cancel-account button {
+  width: 60%;
+  padding: 10px;
+  background: #d9534f;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-container .cancel-account button:hover {
+  background: #c9302c;
+}
+
+.edit-container .links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.edit-container .links a {
+  color: #5bc0de;
+  text-decoration: none;
+}
+
+.edit-container .links a:hover {
+  text-decoration: underline;
+}

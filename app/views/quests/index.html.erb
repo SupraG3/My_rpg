@@ -1,0 +1,38 @@
+<div class="quests-page">
+  <div class="quests-container">
+    <h1>Quests</h1>
+
+    <table class="quests-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th colspan="3">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @quests.each do |quest| %>
+          <tr>
+            <td><%= quest.name %></td>
+            <td><%= quest.description %></td>
+            <% if current_user.admin? %>
+              <td><%= link_to 'Show', quest_path(quest), class: 'btn btn-show' %></td>
+              <td><%= link_to 'Edit', edit_quest_path(quest), class: 'btn btn-edit' %></td>
+              <td><%= link_to 'Destroy', quest, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-destroy' %></td>
+            <% else %>
+              <td><%= link_to 'Start Quest', start_quest_quest_path(quest, player_id: @player.id), class: 'btn btn-start' %></td>
+              <td><%= link_to 'Start Battle', battles_path(quest_id: quest.id, player_id: @player.id), method: :post, class: 'btn btn-battle' %></td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <% if current_user.admin? %>
+      <%= link_to 'New Quest', new_quest_path, class: 'btn btn-new' %>
+    <% end %>
+
+    <%= link_to 'Back to Player', player_path(@player), class: 'btn btn-back' %>
+  </div>
+</div>

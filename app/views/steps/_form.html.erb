@@ -1,0 +1,47 @@
+<%= form_with(model: [@quest, @step], local: true, class: 'edit-step-form') do |form| %>
+  <% if @step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@step.errors.count, "error") %> prohibited this step from being saved:</h2>
+
+      <ul>
+        <% @step.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :order %>
+    <%= form.number_field :order, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :question %>
+    <%= form.text_area :question, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correct_answer %>
+    <%= form.text_field :correct_answer, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wrong_answer %>
+    <%= form.text_field :wrong_answer, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reward_item_id, "Reward Item" %>
+    <%= form.collection_select :reward_item_id, Item.all, :id, :name, include_blank: true, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Update Step', class: 'btn btn-primary' %>
+  </div>
+<% end %>

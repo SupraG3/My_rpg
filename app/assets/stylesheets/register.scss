@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+  }
+  
+  .register-page .register-container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .register-page .register-container .field {
+    margin-bottom: 15px;
+  }
+  
+  .register-page .register-container .field label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .register-page .register-container .field input[type="email"],
+  .register-page .register-container .field input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .register-page .register-container .actions input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .register-page .register-container .actions input[type="submit"]:hover {
+    background: #45a049;
+  }
+  
+  .register-page .register-container .links {
+    margin-top: 20px;
+  }
+  
+  .register-page .register-container .links a {
+    color: #4CAF50;
+    text-decoration: none;
+  }
+  
+  .register-page .register-container .links a:hover {
+    text-decoration: underline;
+  }
+  

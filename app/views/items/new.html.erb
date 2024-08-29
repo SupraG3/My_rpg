@@ -1,0 +1,43 @@
+<div class="items-new-page">
+  <div class="items-new-container">
+    <h1>Add New Item</h1>
+
+    <%= form_with model: @item, local: true, html: { multipart: true } do |f| %>
+      <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= f.label :health_bonus %>
+        <%= f.number_field :health_bonus %>
+      </div>
+
+      <div class="field">
+        <%= f.label :strength_bonus %>
+        <%= f.number_field :strength_bonus %>
+      </div>
+
+      <div class="field">
+        <%= f.label :item_type %>
+        <%= f.select :item_type, ['weapon', 'hat', 'shield'] %>
+      </div>
+
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit 'Create Item' %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Back', players_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

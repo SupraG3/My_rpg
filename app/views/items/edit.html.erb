@@ -1,0 +1,54 @@
+<div class="items-page">
+  <div class="items-container">
+    <h1>Edit Item</h1>
+
+    <%= form_with(model: @item, local: true) do |form| %>
+      <% if @item.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@item.errors.count, "error") %> prohibited this item from being saved:</h2>
+          <ul>
+            <% @item.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name %>
+      </div>
+
+      <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+      </div>
+
+      <div class="field">
+        <%= form.label :health_bonus %>
+        <%= form.number_field :health_bonus %>
+      </div>
+
+      <div class="field">
+        <%= form.label :strength_bonus %>
+        <%= form.number_field :strength_bonus %>
+      </div>
+
+      <div class="field">
+        <%= form.label :item_type %>
+        <%= form.select :item_type, ['weapon', 'hat', 'shield'] %>
+      </div>
+
+      <div class="field">
+        <%= form.label :image %>
+        <%= form.file_field :image %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit 'Update Item', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Back', view_all_items_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

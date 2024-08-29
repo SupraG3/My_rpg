@@ -1,0 +1,36 @@
+<div class="player-details-page">
+  <div class="player-details-container">
+    <h1>Player Details</h1>
+
+    <div class="player-info">
+      <p><strong>Name:</strong> <%= @player.name %></p>
+      <p><strong>Level:</strong> <%= @player.level %></p>
+      <p><strong>Experience:</strong> <%= @player.experience %></p>
+      <p><strong>Health:</strong> <%= @player.health %></p>
+      <p><strong>Strength:</strong> <%= @player.strength %></p>
+      <p><strong>Available Points:</strong> <%= @player.level_up_points %></p>
+    </div>
+
+    <div class="player-actions">
+      <%= link_to 'Edit', edit_player_path(@player), class: 'btn btn-primary' %>
+      <%= link_to 'Back to Players', players_path, class: 'btn btn-secondary' %>
+      <% unless current_user.admin? %>
+        <%= link_to 'View Inventory', inventory_player_path(@player), class: 'btn btn-info' %>
+      <% end %>
+      <%= link_to 'View Quests', quests_path(player_id: @player.id), class: 'btn btn-warning' %>
+    </div>
+
+    <h2>Allocate Points</h2>
+    <%= form_with url: allocate_points_player_path(@player), method: :patch, local: true, class: 'allocate-points-form' do %>
+      <div class="field">
+        <%= label_tag :health_points, "Health Points" %>
+        <%= number_field_tag :health_points, 0 %>
+      </div>
+      <div class="field">
+        <%= label_tag :strength_points, "Strength Points" %>
+        <%= number_field_tag :strength_points, 0 %>
+      </div>
+      <%= submit_tag 'Allocate Points', class: 'btn btn-success' %>
+    <% end %>
+  </div>
+</div>

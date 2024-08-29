@@ -1,0 +1,36 @@
+<div class="steps-page">
+  <div class="steps-container">
+    <h1>Step Details for <%= @quest.name %></h1>
+
+    <div class="step-details">
+      <p>
+        <strong>Description:</strong>
+        <%= @step.description %>
+      </p>
+
+      <p>
+        <strong>Order:</strong>
+        <%= @step.order %>
+      </p>
+    </div>
+
+    <div class="step-question">
+      <h2>Question</h2>
+      <p><%= @step.question %></p>
+    </div>
+
+    <div class="step-answers">
+      <%= form_with url: answer_quest_step_path(@quest, @step, player_id: @player.id), method: :post do %>
+        <%= hidden_field_tag :answer, @step.correct_answer %>
+        <%= submit_tag @step.correct_answer, class: 'btn btn-primary' %>
+      <% end %>
+
+      <%= form_with url: answer_quest_step_path(@quest, @step, player_id: @player.id), method: :post do %>
+        <%= hidden_field_tag :answer, @step.wrong_answer %>
+        <%= submit_tag @step.wrong_answer, class: 'btn btn-danger' %>
+      <% end %>
+    </div>
+
+    <%= link_to 'Back to Quests', quests_path(player_id: @player.id), class: 'btn btn-back' %>
+  </div>
+</div>

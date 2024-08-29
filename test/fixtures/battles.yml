@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_id: 1
+  quest_id: 1
+  player_health: 1
+  opponent_health: 1
+  current_turn: 1
+
+two:
+  player_id: 1
+  quest_id: 1
+  player_health: 1
+  opponent_health: 1
+  current_turn: 1

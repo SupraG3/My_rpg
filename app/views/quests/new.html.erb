@@ -1,0 +1,9 @@
+<div class="new-quest-page">
+  <div class="new-quest-container">
+    <h1>New Quest</h1>
+
+    <%= render 'form', quest: @quest %>
+
+    <%= link_to 'Back', quests_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

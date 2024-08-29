@@ -1,0 +1,80 @@
+.new-quest-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .new-quest-container {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .new-quest-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ffd700;
+  }
+  
+  .new-quest-container .field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .new-quest-container .field label {
+    margin-bottom: 5px;
+  }
+  
+  .new-quest-container .field input[type="text"],
+  .new-quest-container .field textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .new-quest-container .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .new-quest-container .actions input[type="submit"],
+  .new-quest-container .actions .btn-secondary {
+    width: 80%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  .new-quest-container .actions input[type="submit"]:hover,
+  .new-quest-container .actions .btn-secondary:hover {
+    background: #45a049;
+  }
+  
+  .new-quest-container .actions .btn-secondary {
+    background: #5bc0de;
+  }
+  
+  .new-quest-container .actions .btn-secondary:hover {
+    background: #31b0d5;
+  }
+  

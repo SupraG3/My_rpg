@@ -1,0 +1,88 @@
+.new-step-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .new-step-container {
+    width: 30%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .new-step-container h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #ffd700;
+  }
+  
+  .new-step-container .field {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .new-step-container .field label {
+    margin-bottom: 5px;
+  }
+  
+  .new-step-container .field input[type="text"],
+  .new-step-container .field input[type="number"],
+  .new-step-container .field textarea,
+  .new-step-container .field select {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .new-step-container .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .new-step-container .actions input[type="submit"] {
+    width: 80%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .new-step-container .actions input[type="submit"]:hover {
+    background: #45a049;
+  }
+  
+  .new-step-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .new-step-container .btn-back {
+    background-color: #5bc0de;
+  }
+  
+  .new-step-container .btn-back:hover {
+    background-color: #31b0d5;
+  }
+  

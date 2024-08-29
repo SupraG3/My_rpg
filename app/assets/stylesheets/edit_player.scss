@@ -1,0 +1,88 @@
+.edit-player-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .edit-player-container {
+    width: 40%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .edit-player-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ffd700;
+  }
+  
+  .edit-player-container .field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-player-container .field label {
+    margin-bottom: 5px;
+    font-size: 1.2em;
+  }
+  
+  .edit-player-container .field input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+  
+  .edit-player-container .actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .edit-player-container .actions input[type="submit"] {
+    width: 60%;
+    padding: 10px;
+    background: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .edit-player-container .actions input[type="submit"]:hover {
+    background: #45a049;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  .back-link .btn {
+    width: 60%;
+    padding: 10px;
+    background: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-link .btn:hover {
+    background: #5a6268;
+  }
+  

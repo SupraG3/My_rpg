@@ -1,0 +1,9 @@
+<div class="edit-step-page">
+  <div class="edit-step-container">
+    <h1>Edit Step for <%= @quest.name %></h1>
+
+    <%= render 'form', quest: @quest, step: @step %>
+
+    <%= link_to 'Back to Steps', quest_steps_path(@quest), class: 'btn btn-back' %>
+  </div>
+</div>

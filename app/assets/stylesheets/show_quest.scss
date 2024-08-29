@@ -1,0 +1,103 @@
+.quest-details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .quest-details-container {
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .quest-details-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ffd700;
+  }
+  
+  .quest-details-container p {
+    text-align: left;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  
+  .quest-details-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .quest-details-container table th,
+  .quest-details-container table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .quest-details-container table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .quest-details-container table tr:nth-child(even) {
+    background-color: #2f2f2f;
+  }
+  
+  .quest-details-container table tr:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .quest-details-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .quest-details-container .btn-show {
+    background-color: #5bc0de;
+  }
+  
+  .quest-details-container .btn-edit {
+    background-color: #f0ad4e;
+  }
+  
+  .quest-details-container .btn-destroy {
+    background-color: #d9534f;
+  }
+  
+  .quest-details-container .btn-new-step {
+    background-color: #5bc0de;
+  }
+  
+  .quest-details-container .btn-back {
+    background-color: #5bc0de;
+  }
+  
+  .quest-details-container .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .quest-details-container .btn-destroy:hover {
+    background-color: #c9302c;
+  }
+  
+  .quest-details-container .btn-new-step:hover,
+  .quest-details-container .btn-back:hover {
+    background-color: #31b0d5;
+  }
+  

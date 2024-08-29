@@ -1,0 +1,20 @@
+<div class="item-details-page">
+  <div class="item-details-container">
+    <h1><%= @item.name %></h1>
+
+    <div class="item-info">
+      <p><strong>Description:</strong> <%= @item.description %></p>
+      <p><strong>Health Bonus:</strong> <%= @item.health_bonus %></p>
+      <p><strong>Strength Bonus:</strong> <%= @item.strength_bonus %></p>
+      <p><strong>Item Type:</strong> <%= @item.item_type %></p>
+    </div>
+
+    <% if @item.image.attached? %>
+      <div class="item-image">
+        <%= image_tag @item.image, size: "200x200" %>
+      </div>
+    <% end %>
+
+    <%= link_to 'Back to Items', view_all_items_path, class: 'btn btn-secondary' %>
+  </div>
+</div>

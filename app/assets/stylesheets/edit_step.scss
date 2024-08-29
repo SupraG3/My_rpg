@@ -1,0 +1,66 @@
+.edit-step-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .edit-step-container {
+    width: 35%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .edit-step-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .edit-step-container .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-step-container .actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .edit-step-container .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-step-container .btn-primary {
+    background-color: #4CAF50;
+  }
+  
+  .edit-step-container .btn-primary:hover {
+    background-color: #45a049;
+  }
+  
+  .edit-step-container .btn-back {
+    background-color: #5bc0de;
+  }
+  
+  .edit-step-container .btn-back:hover {
+    background-color: #31b0d5;
+  }
+  

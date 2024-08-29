@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'MedievalSharp', cursive;
+}
+
+.login-page .login-container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  width: 300px;
+}
+
+.login-page .login-container .field {
+  margin-bottom: 15px;
+}
+
+.login-page .login-container .field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.login-page .login-container .field input[type="email"],
+.login-page .login-container .field input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-page .login-container .actions input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-page .login-container .actions input[type="submit"]:hover {
+  background: #45a049;
+}
+
+.login-page .login-container .links {
+  margin-top: 20px;
+}
+
+.login-page .login-container .links a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+.login-page .login-container .links a:hover {
+  text-decoration: underline;
+}

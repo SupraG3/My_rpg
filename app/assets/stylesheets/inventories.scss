@@ -1,0 +1,105 @@
+.inventory-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .inventory-container {
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .inventory-container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ffd700;
+  }
+  
+  .inventory-section {
+    margin-bottom: 30px;
+  }
+  
+  .inventory-section h2 {
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #4CAF50;
+  }
+  
+  .item-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .item-list li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .item-list .item-name {
+    font-weight: bold;
+  }
+  
+  .item-list .item-description {
+    font-style: italic;
+    margin-right: auto;
+    margin-left: 10px;
+  }
+  
+  .item-list .btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .item-list .btn-warning {
+    background: #f0ad4e;
+  }
+  
+  .item-list .btn-warning:hover {
+    background: #ec971f;
+  }
+  
+  .item-list .btn-primary {
+    background: #4CAF50;
+  }
+  
+  .item-list .btn-primary:hover {
+    background: #45a049;
+  }
+  
+  .back-link {
+    margin-top: 20px;
+  }
+  
+  .back-link .btn {
+    padding: 10px 20px;
+    background: #6c757d;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-link .btn:hover {
+    background: #5a6268;
+  }
+  

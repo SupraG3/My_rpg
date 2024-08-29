@@ -1,0 +1,33 @@
+<div class="inventory-page">
+  <div class="inventory-container">
+    <h1>Inventory for <%= @player.name %></h1>
+
+    <div class="inventory-section">
+      <h2>Equipped Items</h2>
+      <ul class="item-list">
+        <% @equipped_items.each do |item| %>
+          <li>
+            <span class="item-name"><%= item.name %></span> - <span class="item-description"><%= item.description %></span>
+            <%= link_to 'Unequip', unequip_item_player_path(@player, item_id: item.id), method: :patch, class: 'btn btn-warning' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="inventory-section">
+      <h2>Available Items</h2>
+      <ul class="item-list">
+        <% @available_items.each do |item| %>
+          <li>
+            <span class="item-name"><%= item.name %></span> - <span class="item-description"><%= item.description %></span>
+            <%= link_to 'Equip', equip_item_player_path(@player, item_id: item.id), method: :patch, class: 'btn btn-primary' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="back-link">
+      <%= link_to 'Back to Player', @player, class: 'btn btn-secondary' %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+.item-details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .item-details-container {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .item-details-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .item-details-container .item-info p {
+    margin-bottom: 10px;
+  }
+  
+  .item-details-container .item-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: #5a6268;
+    }
+  }
+  

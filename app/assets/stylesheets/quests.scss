@@ -1,0 +1,137 @@
+.quests-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .quests-container {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quests-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #ffd700;
+  }
+  
+  .quests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .quests-table th,
+  .quests-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .quests-table th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .quests-table tr:nth-child(even) {
+    background-color: #2f2f2f;
+  }
+  
+  .quests-table tr:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .btn-show {
+    background-color: #5bc0de;
+  }
+  
+  .btn-show:hover {
+    background-color: #31b0d5;
+  }
+  
+  .btn-edit {
+    background-color: #f0ad4e;
+  }
+  
+  .btn-edit:hover {
+    background-color: #ec971f;
+  }
+  
+  .btn-destroy {
+    background-color: #d9534f;
+  }
+  
+  .btn-destroy:hover {
+    background-color: #c9302c;
+  }
+  
+  .btn-start {
+    background-color: #5cb85c;
+  }
+  
+  .btn-start:hover {
+    background-color: #4cae4c;
+  }
+  
+  .btn-battle {
+    background-color: #5bc0de;
+  }
+  
+  .btn-battle:hover {
+    background-color: #31b0d5;
+  }
+  
+  .btn-new {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #5bc0de;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-new:hover {
+    background-color: #31b0d5;
+  }
+  
+  .btn-back {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-back:hover {
+    background-color: #5a6268;
+  }
+  

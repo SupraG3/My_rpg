@@ -1,0 +1,100 @@
+.player-details-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url(asset-path('campement-2.webp')) no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'MedievalSharp', cursive;
+    color: #fff;
+  }
+  
+  .player-details-container {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+  
+  .player-details-container h1 {
+    margin-bottom: 20px;
+  }
+  
+  .player-details-container .player-info p {
+    margin-bottom: 10px;
+  }
+  
+  .player-details-container .player-actions {
+    margin: 20px 0;
+  }
+  
+  .player-details-container .player-actions .btn {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .player-details-container .player-actions .btn-primary {
+    background-color: #4CAF50;
+  }
+  
+  .player-details-container .player-actions .btn-secondary {
+    background-color: #5bc0de;
+  }
+  
+  .player-details-container .player-actions .btn-info {
+    background-color: #f0ad4e;
+  }
+  
+  .player-details-container .player-actions .btn-warning {
+    background-color: #d9534f;
+  }
+  
+  .player-details-container .player-actions .btn:hover {
+    background-color: #45a049;
+  }
+  
+  .player-details-container h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .allocate-points-form .field {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .allocate-points-form .field label {
+    margin-bottom: 5px;
+  }
+  
+  .allocate-points-form .field input[type="number"] {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .allocate-points-form .btn-success {
+    width: 60%;
+    padding: 10px;
+    background: #5bc0de;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .allocate-points-form .btn-success:hover {
+    background: #31b0d5;
+  }
+  
